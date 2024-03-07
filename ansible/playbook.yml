@@ -1,0 +1,11 @@
+---
+- name: Deploy Web Application on AWS
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars_files:
+    - "{{ playbook_dir }}/../vars/aws_vars.yml"  
+  roles:
+    - common
+    - webapp
+

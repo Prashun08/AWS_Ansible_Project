@@ -1,0 +1,10 @@
+aws_key_name: "docker_test"
+aws_instance_type: "t2.micro"
+aws_ami_id: ami-0189f438705038e8d
+aws_region: "us-east-1"
+aws_subnet_id: "subnet-0a578f328df5c6279"
+aws_security_group: "sg-0547c4010506efe5b"
+aws_assign_public_ip: true
+aws_count_tag: "web-server"
+aws_instance_tags:
+  Name: "web-server"

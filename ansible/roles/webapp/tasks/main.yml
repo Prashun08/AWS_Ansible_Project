@@ -1,0 +1,20 @@
+---
+- name: Install Nginx
+  become: true
+  apt:
+    name: nginx
+    state: present
+
+- name: Deploy web application
+  copy:
+    src: "{{ playbook_dir }}/roles/webapp/files/index.html"
+    dest: /var/www/html/index.html
+  become: true
+
+- name: Start Nginx
+  become: true
+  service:
+    name: nginx
+    state: started
+    enabled: true
+
